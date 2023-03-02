@@ -2,9 +2,9 @@ name: CI/CD
 run-name: Testing
 on:
   push:
-    branches: [ dev ]
+    branches: [ master ]
   pull_request:
-    branches: [ dev ]
+    branches: [ master ]
 jobs:
   test-laravel8-php74:
     runs-on: ubuntu-latest
