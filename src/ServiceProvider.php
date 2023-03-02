@@ -14,8 +14,8 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function boot()
     {
-        Blade::directive('crop', function ($str, $length) {
-            return "<?php echo (new I3bepb\CropStrBladeDirective\CropStr())->apply($str, $length); ?>";
+        Blade::directive('crop', function ($expression) {
+            return "<?php echo (new I3bepb\CropStrBladeDirective\CropStr())->apply($expression); ?>";
         });
     }
 }
